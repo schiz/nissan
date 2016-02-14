@@ -1,0 +1,684 @@
+/* ___________1. Сброс CSS____________________*/
+
+@import 'reset.css';
+
+/* ___________2. Типовые элементы____________*/
+
+@font-face {
+	font-family: 'NissanBold';
+	src: url('../css/fonts/nissanag-bold-webfont.eot');
+	src: url('../css/fonts/nissanag-bold-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../css/fonts/nissanag-bold-webfont.woff') format('woff'),
+		 url('../css/fonts/nissanag-bold-webfont.ttf') format('truetype'),
+		 url('../css/fonts/nissanag-bold-webfont.svg#NissanBold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+body {	
+	background-color: #fff;
+	color: #000;	
+	font-family: Arial, Helvetica, sans-serif;	
+	font-size: 16px;
+	margin: 0 auto;
+	min-width: 978px;
+	position: relative;
+	text-align: center;
+}
+.container {	
+	margin: 0 auto;	
+	position: relative;
+	text-align: left;
+	width: 978px;
+}
+.siteInfoBkg {
+	background: #f5f5f5;
+	height: 369px;
+	border: 1px solid #edeeee;
+	position: absolute;
+	top: 71px;
+	width: 100%;
+
+	.grey-border {
+		border: 1px solid #b9babd;
+		height: 367px;
+	}
+	.white-border {
+		border: 1px solid #f9f9f9;
+		height: 365px;
+	}
+}
+.footerBkg {
+	background: url(../images/footerBkg.jpg) left repeat-x;
+	height: 187px;
+	position: absolute;
+	width: 100%;
+	top: 927px;
+}
+.red {
+	color: #c51733;
+}
+/* ___________3. Хедер____________*/
+.container {
+	& > header {
+		.clearfix;
+
+		height: 71px;		
+		margin-left: -1px;
+
+		.logo {
+			position: absolute;
+			margin-right: 18px; 
+			z-index: 1;
+		}
+		.legeartis-logo {
+			position: absolute;
+			right: 3px;
+			top:15px;
+		}
+	}
+}
+
+/* ___________4. текст сверху____________*/
+
+.container {
+	& > .site-info {		
+		height: 189px;
+		padding-top: 140px;	
+		position: relative;
+	
+		header {
+			font-family: 'NissanBold';
+			font-size: 27px;
+			text-align: center;
+			
+		}
+		p.infoText {
+			font-size: 18px;
+			font-style: italic;
+			text-align: center; 
+			width: 535px;
+			margin: 22px auto 0;
+			line-height: 21px; 
+		}
+
+		.dealer {
+			position: absolute;
+			top: 20px;
+			right: 1px;
+			text-align: right;
+			
+			p {				
+				font-size: 12px;
+				margin-bottom: 16px;
+			}
+			a {
+				display: block;
+				color: #000;
+				text-decoration: none;
+				font-size: 12px;
+				line-height: 14px;
+			}
+		}
+	}
+}
+nav.main {	
+
+	width: 872px;
+	margin: 0 auto;
+
+
+	a {	
+		color:#c0c0c0;
+		display: inline-block;
+		height: 33px;
+		font-size: 16px;
+		font-weight: bold;
+		margin-right: 19px;
+		padding-top: 8px;
+		text-decoration: none;
+
+		&.active {
+			border-bottom: 4px solid #c51733;
+			color:#363636;
+		}
+		&:hover {
+			color:#363636;
+		}
+		&#specOffer {
+			width: 342px;
+			margin-right: 272px;
+		}
+		&#shares {
+		}
+	}
+}
+/* ___________5. пожизненный сервис____________*/
+
+.container {
+	& > .service-about {
+		.clearfix;
+		
+		margin: 36px 0px 50px 52px;		
+		
+		article {
+			float: left;
+
+			header {
+				font-family: 'NissanBold';
+				font-size: 16px;
+				margin-bottom: 13px;
+			}
+			p {
+				font-size: 12px;
+				line-height: 17px;
+				width: 604px;
+				padding-bottom: 16px;
+			}
+			span {
+				font-size: 11px;				
+				line-height: 14px;				
+			}
+		}
+		.detailed {
+			background: #f1f1f1;
+			height: 161px;
+			width: 306px;
+			float: left;
+			margin: -3px 0px 0px 16px;
+			text-align: center;
+
+			p {
+				font-size: 12px;
+				font-style: italic;
+				margin: 32px auto 20px;
+				text-align: center;
+				width: 200px;
+				line-height: 17px;
+			}
+			a {
+				font-size: 18px;
+				text-decoration: none;
+				color: #c51733;
+
+			}
+		}	
+	}	
+}
+
+/* ___________6. реклама____________*/
+
+.container {
+	& > .advertising {
+		text-align: center;
+		padding-top: 41px;
+		margin-left: 52px;
+		height: 104px;	
+		border-top: 1px solid #ebeced;
+		border-bottom: 1px solid #edeeee;
+
+		header{
+			font-family: 'NissanBold';
+			font-size: 19px;
+			margin-bottom: 14px;
+		}
+		p {
+			line-height: 19px;
+			margin: 0 auto;
+		}		
+	}
+}
+/* ___________7. прайс____________*/
+.container {
+	& > .price {
+		border-top: 1px solid #b9babd;
+		border-bottom: 1px solid #b9babd;
+		
+		width: 926px;
+		height: 200px;
+		margin-left: 52px;	
+
+		tr.titles{
+			height: 57px;
+			border-bottom: 1px solid #ebeced;
+		}
+		th {
+			font-size: 12px;
+			font-weight: bold;
+			padding-top: 16px;			
+			line-height: 16px;
+
+			&.download {
+				padding-left: 25px;
+			}
+		}
+		tr {
+			font-size: 12px;
+			height: 74px;
+
+			&.last {
+				height: 103px;
+			}
+		}
+		td {
+			padding-top: 17px;
+			line-height: 15px;
+		
+			&.auto {
+				width: 199px;
+			}
+			&.price {
+				width: 167px;
+			}
+			&.credit {
+				width: 210px;
+				padding-right: 107px;
+			}
+			&.download {				
+				position: relative;
+
+				a {
+					
+					background: #000;
+					display: block;					
+					width: 168px;
+					height: 44px;
+					text-align: center;	
+					text-decoration: none;				
+					color: #fff;
+					position: absolute;
+					top: 18px;
+
+					p {						
+						padding-top: 14px;
+					}
+					
+					&:hover {
+						background: #c51633;
+					}				
+				}
+			}
+		}
+	}
+}
+.container {
+	& > .spring-offer {
+		.clearfix;
+
+		margin-left: 52px;	
+
+		article {
+			float: left;
+			margin-top: 46px;
+		}
+
+		.info {
+			width: 540px;
+
+			header {
+				font-family: 'NissanBold';
+				font-size: 16px;
+				line-height: 19px;
+			}
+			table {
+				margin-top: 43px;
+				width: 536px;								
+				border: 1px solid #f3f4f4;
+				border-top: 1px solid #b9babd;
+				border-left: 0px;
+				font-size: 12px;
+
+				tr {
+				
+					&.percent {
+						td {
+							padding-top: 31px;
+							padding-bottom: 27px;
+						}
+					}
+
+				}
+				td,th {
+					padding-top: 18px;
+					line-height: 13px;
+					height: 26px;
+					width: 105px;
+					text-align: center;
+
+					&:first-child {
+						text-align:left;
+						font-weight:bold;
+					}
+				}
+				.year1 {
+						padding-left: 6px;
+						width: 124px;
+				}
+				.year2 {
+					width: 110px;
+				}
+				.year3 {
+					width: 108px;
+				}
+				.year4 {					
+					width: 105px;
+				}
+				.year5 {					
+					width: 110px;
+				}
+				.leftBorder {
+					border-left: 1px solid #f3f4f4;					
+				}
+				.red {
+					color: #c51733;
+				}
+
+			}
+		}
+		.additional {
+			color: #939598;
+			font-size: 11px;
+			width: 320px;
+			margin: 52px 0px 0px 66px;
+
+			p {
+				.clearfix;
+
+				line-height: 13px;
+
+				span {
+					float: left;
+					width: 307px;					
+
+					&.star {
+						width: 11px;
+					}
+				}
+
+			}
+			.star2 {
+				margin-top: 13px;
+				
+				span {
+					float: left;
+					width: 296px;					
+
+					&.star {
+						width: 11px;
+					}
+				}
+			}
+		}
+	}
+}
+.container {
+	& > .tires {
+		.clearfix;
+
+		margin-left: 52px;
+		margin-top: 55px;	
+
+		header {
+			font-size: 16px;
+			font-family: 'NissanBold';
+		}
+		article {
+			width: 415px;
+			font-size: 12px;
+			float: left;
+			margin-top: 15px;
+			line-height: 14px;
+
+			&.last {
+				width: 405px;
+				margin-left: 88px;
+
+			}
+		}
+	}
+}
+.container {
+	& > .tires-price {
+		font-size: 12px;
+		margin-top: 44px;
+
+		.info {
+			margin-left: 52px;			
+			border: 1px solid #ecedee;
+			border-top: 1px solid #a7a9ac;
+			width: 100%;
+
+			.discount {
+				width: 336px;
+				border: 1px solid #ecedee;
+				border-bottom: 0px;
+
+				tr,th { border: 1px solid #ecedee; }
+				th {
+					padding-top: 15px;
+					padding-left: 29px;
+					height: 70px;
+					line-height: 14px;
+				}
+				td {
+					padding-left: 30px;
+				}
+				.valign {
+					padding-top: 16px;
+					height: 26px;
+				}				
+			}
+		}
+		.tyres-depth {
+			width: 100%;
+			th,td {
+				border: 1px solid #ecedee;
+				height: 26px;
+				padding-top: 16px;
+				padding-left: 27px;
+			}
+
+			th {
+				padding-left: 85px;
+			}			
+			.noborder {
+				border-bottom: 0px;
+			}
+		}
+	}
+}
+.container {
+	& > .conditional {
+		.clearfix;
+
+		margin-left: 52px;
+		margin-top: 33px;
+		font-size: 11px;
+
+		article,aside {
+			float: left;
+		}
+		aside {
+			width: 390px;
+			height: 335px;
+			background: #f1f1f1;
+			margin-top: 11px;
+			margin-left: 55px;
+
+			.line {
+				width: 117px;
+				height: 2px;
+				background: #fff;
+				margin: 18px auto 16px;
+			}
+
+			p{
+				border: 0px;
+				text-align: center;
+				width: 190px;
+				height: 80px;
+				margin: 59px auto 0;
+				font-size: 12px;
+				font-style: italic;
+				line-height: 16px;
+			}
+			p.add {
+				margin-top: 0px;
+				width: 195px;
+				height: 55px;
+			}
+			a {
+				font-size: 18px;
+				color: #c51733;
+				text-decoration: none;
+				margin-left: 115px;
+			}
+
+		}
+
+		header {
+			font-weight: bold;
+			margin-bottom: 4px;
+		}
+		p {
+			border-bottom: 1px solid #b9babd;
+			width: 480px;
+			line-height: 12px;
+			height: 50px;
+		}
+		table {
+			font-size: 12px;
+			margin-top: 20px;
+			margin-left: 29px;
+
+			th {
+				font-weight: bold;
+			}
+			tr:first-child {
+				height: 44px;
+			}
+			tr {
+				height: 29px;
+			}
+			td {
+				width: 221px;
+			}
+		}
+	}
+}
+.container {
+	& > .articles {
+		.clearfix;
+
+		margin-left: 52px;
+		margin-top: 20px;
+
+		article {
+			width: 370px;
+			margin-right: 129px;
+			margin-bottom: 20px;
+			display: inline-block;
+			border-bottom: 1px solid #b9babd;
+			vertical-align: top;
+
+			header {
+				font-family: "NissanBold";
+				font-size: 16px;
+				margin-bottom: 17px;
+			}
+			p {
+				font-size: 12px;
+				line-height: 14px;
+				margin-bottom: 18px;
+
+				&.italic {
+					font-style: italic;
+				}
+				&.star {
+					font-size: 11px;
+				}
+			}
+
+			&.last {
+				margin:0;
+			}
+			&.noborder {
+				border-bottom: 0px;
+			}
+			&.detail {
+				width: 337px;
+				height: 146px;
+				border: 1px dashed #a7a9ac;
+
+				a {
+					img {
+						margin-left: 63px;
+						margin-top: 46px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ___________6. Футер____________*/
+
+.container {
+	& > footer { 
+		height: 158px;
+
+		margin-top: 27px;
+		padding-top: 29px;
+
+		.copyright {
+			font-size: 12px;
+			float: left;
+			margin-right: 104px;
+			margin-top: 2px;
+		}
+		nav {
+			float: left;
+			font-size: 0;
+
+			a {
+				color: #3d3d3d;
+				font-size: 12px;
+				text-decoration: none;
+
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+			.separator {
+				font-size: 12px;
+				margin: 0 8px;
+			}
+		}
+		.footer-line {
+			.clearfix;
+			height: 0px;
+			border-top: 1px solid #b7b7b7;
+			border-bottom: 1px solid #fff;
+			margin-top: 41px;
+		}
+		.footer-text {
+			font-size: 12px;
+			color:#878787;
+			line-height: 14px;
+			margin-top: 17px;
+		}
+	}
+}
+/*___________Дополнительные стили_______________*/
+.clearfix {
+    zoom: 1;
+    &:before, &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+

@@ -1,0 +1,771 @@
+/* ___________1. Сброс CSS____________________*/
+
+@import 'reset.css';
+
+/* ___________2. Типовые элементы____________*/
+
+@font-face {
+	font-family: 'NissanBold';
+	src: url('../css/fonts/nissanag-bold-webfont.eot');
+	src: url('../css/fonts/nissanag-bold-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../css/fonts/nissanag-bold-webfont.woff') format('woff'),
+		 url('../css/fonts/nissanag-bold-webfont.ttf') format('truetype'),
+		 url('../css/fonts/nissanag-bold-webfont.svg#NissanBold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+body {	
+	background-color: #e6e6e6;
+	color: #3d3d3d;	
+	font-family: Arial, Helvetica, sans-serif;	
+	font-size: 16px;
+	margin: 0 auto;
+	min-width: 978px;
+	position: relative;
+	text-align: center;
+}
+.container {	
+	margin: 0 auto;	
+	position: relative;
+	text-align: left;
+	width: 978px;
+}
+.headerBkg, .newsBkg, .footerBkg {
+	background: #fff;
+	position: absolute;
+	width: 100%;
+}
+.news-line {	
+	background: #ebebeb;
+	height: 1px;
+	position: absolute;
+	top:754px;
+	left: 0px;
+	width: 100%;
+}
+.headerBkg {
+	height: 71px;
+	top:0px;
+}
+.newsBkg {
+	height: 423px;
+	top: 504px;
+}
+.footerBkg {
+	background: url(../images/footerBkg.jpg) left repeat-x;
+	height: 187px;
+	top: 927px;
+}
+.red {
+	color: #c51733;
+}
+/* ___________3. Хедер____________*/
+.container {
+	& > header {
+		.clearfix;
+
+		height: 71px;		
+		margin-left: -1px;
+
+		.logo {
+			position: absolute;
+			margin-right: 18px; 
+			z-index: 1;
+		}
+		nav {
+			float: left;
+			margin-left: 102px;
+			line-height: 70px;
+
+			ul {
+				.clearfix;			
+
+				li {
+					float: left;
+					margin-right: 30px;
+					position: relative;
+
+					img {
+						left: 85px;
+						position: absolute;
+						top: 34px;
+						vertical-align: middle;
+					}				
+				}
+			}
+			a {
+				color: #3d3d3d;
+				display: block;
+				font-size: 11px;
+				font-weight: bold;
+				height: 67px;
+				line-height: 74px;
+				text-decoration: none;
+				text-transform: uppercase;
+				vertical-align: middle;
+
+				&:hover {
+					text-decoration:underline;
+				}
+				&.active {
+					border-bottom: 4px solid #c51733;
+					color: #c51733;
+				}
+			}
+		}
+		.header-phone {
+			float: left;
+			font-size: 16px;
+			margin: 10px 0px 0px 6px;
+			line-height: 22px;
+			text-transform: uppercase;
+
+			.dealer-name {}
+			.delaer-phone {}
+		}
+	}
+}
+
+/* ___________4. Баннер____________*/
+
+.container {
+	& > .banner {
+		.clearfix;
+
+		height: 434px;
+
+		&.v2 {
+			
+			.banner-wrapper {
+				width: 100%;
+			}
+			.banner-right {
+				display: none;
+			}
+
+		}
+
+		.banner-wrapper {
+			margin-top: 9px;
+			width: 725px;
+			overflow: hidden;
+			position: relative;
+			float: left;
+			height: 400px;
+		}
+		.banner-slide {
+			position: relative;
+			display: none;
+
+			&.active {
+				display: block;
+			}
+		}
+		.banner-controls {
+			.clearfix;
+
+			position: absolute;
+			bottom: 26px;
+			left: 29px;
+
+			.switcher {
+				background: url(../images/banner-controls.png) no-repeat 0px -12px;
+				height: 14px;
+				float: left;
+				cursor: pointer;
+				margin-right: 7px;
+				width:14px;
+
+				&.active {
+					background-position: 0px 1px;
+				}
+			}
+		}
+
+		.car-info {
+			background: #c51733;
+			color: #fff;
+			display: none;
+			height: 246px;
+			left: 29px;
+			top:73px;
+			padding: 10px 11px;
+			position: absolute;
+			width: 198px;
+
+			.brand {
+				font-size: 13px;
+				text-transform: uppercase;
+			}
+			.model {
+				font-size: 24px;
+				text-transform: uppercase;
+				margin-top: 6px;
+			}
+			.price {
+				font-size: 13px;
+				position: absolute;
+				left: 25px;
+				text-align: center;
+				top: 219px;
+
+				span {
+					font-size: 24px;
+					font-weight: bold;
+				}
+			}
+			ul {
+				margin-top: 17px;
+				line-height: 16px;
+
+				li {
+					font-size: 13px;			
+					margin-bottom: 10px;		
+					list-style: disc;
+					list-style-position: inside;
+				}
+			}
+
+		}	
+		.car-subscribe {
+			background: #c51733;
+			color:#fff;
+			cursor: pointer;
+			display: block;
+			height: 40px;
+			left: 31px;
+			line-height: 40px;
+			position: absolute;
+			text-align: center;
+			text-decoration: none;
+			top:209px;
+			width: 222px;
+		}
+		.car-text {
+			font-family: 'NissanBold';
+			color: #fff;
+			font-size: 30px;
+			line-height: 44px;
+			position: absolute;
+			left: 28px;
+			top: 86px;
+			text-transform: uppercase;
+		}
+		.banner-right {
+			background: #fff;
+			cursor: pointer;
+			float: left;
+			height: 400px;
+			margin-top: 9px;
+			margin-left: 11px;
+			padding-left: 11px;
+			width: 231px;
+
+			.img-top {
+				.clearfix;
+				
+				font-family: 'NissanBold';
+
+				p,img {
+					float: left;
+				}
+				p {
+					font-size: 16px;
+					width: 95px;
+					margin-left: 9px;
+					text-transform: uppercase;
+					margin-top: 28px;
+					line-height: 17px;
+
+					span {
+						font-size: 26px;
+					}
+				}
+				img {
+					width: 64px;
+					height: 71px;
+				}
+			}
+			.car-img {
+				margin-top: 56px;
+				margin-left: 6px;
+			}
+			.text {
+				font-size: 11px;
+				font-family: 'NissanBold';
+				font-weight: normal;
+				margin-top: 79px;
+				line-height: 17px;
+			}
+		}
+	}
+}
+
+/* ___________5. Новости____________*/
+
+.container {
+	& > .news {
+		
+		.news-banner-wrapper {
+			.clearfix;
+		}
+		.news-banner {
+			float: left;
+			height: 200px;
+			margin-top: 29px;
+			margin-right: 30px;
+			position: relative;
+			width: 306px;
+
+			&.last {
+				margin-right: 0px;
+			}
+
+			img {
+				display: block;
+			}
+
+			.info {
+				background: url(../images/opacity.png);
+				bottom: 0px;	
+				color: #fff;			
+				height: 67px;
+				font-size: 18px;
+				font-weight: bold;
+				position: absolute;
+				width: 100%;
+
+				.news-img-model {
+					text-transform: uppercase;
+					margin: 7px 0px 6px 15px;
+				}
+				.news-img-info {
+					margin-left: 15px;
+
+					.news-img-price {
+						color: #c51733;
+					}
+				}
+			}
+		}
+		header {
+			margin-top: 35px;
+
+			nav {
+
+				a {	
+					color:#c0c0c0;
+					font-size: 18px;
+					font-weight: bold;
+					margin-right: 19px;
+					padding-top: 8px;
+					text-decoration: none;
+
+					&.active {
+						border-top: 4px solid #c51733;
+						color:#363636;
+					}
+					&:hover {
+						color:#363636;
+					}
+				}
+			}
+		}
+		.articles {
+			.clearfix;
+			font-size: 13px;
+			position: relative;
+			overflow: hidden;
+			height: 113px;
+
+			.overflow-block {
+				height: 113px;
+				margin-left: 42px;
+				position: absolute;
+				width: 900px;
+				overflow: hidden;
+			}
+			.articles-slide, {				
+				width: 300%;
+				position: absolute;
+				display: none;	
+
+				&.active {
+					display:block;
+				}			
+			}
+			article {
+				float: left;
+				margin-right: 113px;				
+				width: 222px;	
+
+				&.last {
+					margin: 0px;
+				}				
+
+			}
+			.date {
+				font-size: 11px;
+				margin-top: 22px;
+			}
+			.title {
+				color: #c51733;
+				display: block;	
+				margin-top: 2px;
+				line-height: 18px;	
+
+				&:hover {
+					text-decoration: none;
+				}		
+			}
+			.text {				
+				color:#c0c0c0;
+				margin-top: 6px;
+				line-height: 18px;
+			}
+			.next-news, .prev-news {
+				cursor: pointer;
+				position: absolute;
+				right: 0px;
+				top: 15px;
+
+				&.disabled {
+					opacity: 0.5;
+					-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+					cursor: default;
+				}
+			}
+			.prev-news {				
+				left: 0px;				
+			}
+		}
+	}
+}
+
+/* ___________6. Контент____________*/
+
+.container {
+	& > .content { 
+		.clearfix;
+
+		margin-top: 42px;
+		margin-left: -2px;
+		
+		
+		header {
+			font-size: 30px;
+			font-weight: bold;			
+		}
+		.breadcrumbs {			
+			font-size: 0;
+			float: left;
+			margin-top: 5px;
+
+			a {
+				color: #3d3d3d;
+				font-size: 12px;
+				text-decoration: none;
+				vertical-align: middle;
+
+				&:hover {
+					text-decoration: underline;
+				}
+				&.active {
+					color:#c51733;
+				}
+			}
+			img {
+				vertical-align: middle;
+				margin: 0 10px;
+			}
+		}
+		nav.top-nav {
+			float: right;
+			line-height: 24px;
+
+			a {
+				background: #eee;
+				color: #3d3d3d;
+				font-size: 11px;
+				font-weight: bold;
+				padding: 13px 19px;
+				text-decoration: none;
+				text-transform: uppercase;
+
+				&:hover {
+					color:#c51733;
+				}
+				&.active {
+					background: #fff;
+				}
+			}
+		}
+		.main-content {
+			.clearfix;
+			background: #fff;
+			border:1px solid #ebebeb;			
+			margin-top: 8px;
+			padding-left: 20px;
+		}
+		aside {
+			float:left;
+		}
+		.car-model {
+			float: left;
+			margin-top: 89px;
+			margin-left: 138px;
+		}
+		.offer-block {		
+			font-size: 12px;
+			margin-top: 27px;
+
+			.price {
+				span.number {
+					font-weight: bold;
+				}
+			}
+			.credit {
+				margin-top: 20px;
+			}
+			h4 {
+				margin-bottom: 10px;
+			}
+			span.number {
+				font-size: 24px;
+				color:#c51733;
+			}
+			span {
+				font-size: 14px;
+			}
+		}
+		nav.left-nav {
+			margin: 57px 0 0 6px;
+			width: 220px;
+
+			ul {}
+			li {
+				.clearfix;
+				cursor: pointer;
+				opacity: 0.4;
+				-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+				
+				&.separator {
+					background: #efefef;
+					height: 1px;
+					margin: 13px 0;
+					opacity: 1;
+					-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+					width:150px;
+				}
+				&.active,&:hover {
+					opacity: 1;
+					-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+				}
+			}
+			a {	
+				color: #3d3d3d;
+				font-size: 12px;
+				font-weight: bold;
+				text-decoration: none;
+				text-transform: uppercase;
+				vertical-align: middle;
+			}
+			.img-wrapper{
+				float:left;
+				width:35px;
+			}
+			img {
+				margin-right: 21px;
+				vertical-align: middle;
+			}
+		}
+		.text {
+			.clearfix;
+
+			font-size: 14px;
+			margin-top: 44px;
+
+			h5 {
+				font-size: 18px;
+				font-weight: bold;
+				margin-bottom: 15px;
+			}
+			article {
+				line-height: 17px;
+				font-size: 14px;
+
+				&.left, &.right {
+					float:left;
+					width:470px;
+				}
+				&.left {
+					margin-right: 13px;					
+				}
+				&.right {
+					height: 200px;
+				}
+				&.bottom {
+					.clearfix;
+					margin-top: 38px;
+					padding-bottom: 115px;
+				}				
+			}
+			.article-bottom {
+				.clearfix;
+			}
+		}
+		.car-model-text {
+			font-size: 14px;
+			float: left;
+			margin: 28px 0 0 58px; 
+			position: relative;
+
+			h5 {
+				font-size: 18px;
+				font-weight: bold;
+				margin-bottom: 15px;
+			}
+			article {
+				line-height: 17px;
+			}
+		}
+		.cars-articles {
+			.clearfix;
+			margin-top: 61px;
+
+			article {
+				cursor: pointer;
+				position: relative;
+				width: 175px;
+				height: 270px;
+				float: left;		
+				margin: 0 25px 0px 34px;		
+				line-height: 16px;
+
+				.detail {
+					display: none;
+					height: 34px;
+					width: 233px;
+					color:#fff;
+					font-size: 14px;
+					background: #c51733;
+					position: absolute;					
+					line-height: 34px;
+					text-align: center;
+					text-decoration: none;
+					margin-top: 30px;
+					margin-left: -32px;
+				}
+				&:hover {
+					.detail {
+						display: block;
+					}
+				}
+			}
+			.car-name {
+				font-size: 16px;
+				font-weight: bold;
+			}
+			.car-price {
+				font-size: 14px;
+			}
+			.car-credit {
+				font-size: 12px;
+			}
+			.car-img {
+				margin-left: 5px;
+				margin-top: 63px;
+			}			
+		}		
+	}
+}
+.container.auto-about {
+	.content {
+		padding-bottom: 178px;
+		height: 865px;
+	}	
+}
+.container.auto-info {
+	.content {		
+		height: 582px;
+	}
+	.car-model {
+		margin-top: -13px;
+		margin-left: 91px;
+
+		img {
+			width: 523px;
+		}
+	}	
+}
+.container.auto-list {
+	.content {		
+		height: 703px;
+	}
+	.top-nav {
+		margin-top: -9px;
+	}
+}
+
+/* ___________6. Футер____________*/
+
+.container {
+	& > footer { 
+		height: 158px;
+
+		margin-top: 27px;
+		padding-top: 29px;
+
+		.copyright {
+			font-size: 12px;
+			float: left;
+			margin-right: 104px;
+			margin-top: 2px;
+		}
+		nav {
+			float: left;
+			font-size: 0;
+
+			a {
+				color: #3d3d3d;
+				font-size: 12px;
+				text-decoration: none;
+
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+			.separator {
+				font-size: 12px;
+				margin: 0 8px;
+			}
+		}
+		.footer-line {
+			.clearfix;
+			height: 0px;
+			border-top: 1px solid #b7b7b7;
+			border-bottom: 1px solid #fff;
+			margin-top: 41px;
+		}
+		.footer-text {
+			font-size: 12px;
+			color:#878787;
+			line-height: 14px;
+			margin-top: 17px;
+		}
+	}
+}
+/*___________Дополнительные стили_______________*/
+.clearfix {
+    zoom: 1;
+    &:before, &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
